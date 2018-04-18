@@ -50,16 +50,24 @@
     return cell;
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    NSLog(@"手势滑动开始");
+}
+
 #pragma mark - UIScrollViewDelegate
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    NSLog(@"scrollView的偏移量:%f",scrollView.contentOffset.y);
-    if (scrollView == self.subScrollView) {
-        NSLog(@"当前加载的是子ScrollView");
-    }
-    if (scrollView == self.mainScrollView) {
-        NSLog(@"当前加载的是mainScrollView");
-    }
+//    CGFloat offsetY = scrollView.contentOffset.y;
+//    NSLog(@"scrollView的偏移量:%f",scrollView.contentOffset.y);
+//    if (scrollView == self.subScrollView) {
+//        NSLog(@"当前加载的是子ScrollView");
+//        if (offsetY < 0) {
+//            self.mainScrollView.contentOffset = CGPointMake(0, offsetY);
+//        }
+//    }
+//    if (scrollView == self.mainScrollView) {
+//        NSLog(@"当前加载的是mainScrollView");
+//    }
 }
 
 #pragma mark - Private
@@ -70,7 +78,7 @@
     self.mainScrollView.scrollEnabled = YES;
     self.mainScrollView.delegate = self;
     self.mainScrollView.showsVerticalScrollIndicator = YES;
-    self.mainScrollView.contentSize = CGSizeMake(375, 320);
+    self.mainScrollView.contentSize = CGSizeMake(375, 300);
     [self.view addSubview:self.mainScrollView];
     
     UILabel *topLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, -50, 375, 50)];
@@ -85,12 +93,21 @@
     label.textAlignment = NSTextAlignmentCenter;
     [self.mainScrollView addSubview:label];
     
-    self.subScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 375, 200)];
+    self.subScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 375, 100)];
     self.subScrollView.delegate = self;
+    self.subScrollView.contentSize = CGSizeMake(375, 100);
     self.subScrollView.backgroundColor = [UIColor orangeColor];
     [self.mainScrollView addSubview:self.subScrollView];
     
+    UILabel *sublabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 375, 100)];
+    sublabel.backgroundColor = [UIColor blueColor];
+    sublabel.text = @"子ScrollView 刷新顶部";
+    sublabel.textAlignment = NSTextAlignmentCenter;
+    [self.subScrollView addSubview:sublabel];
+    
 //    self.mainScrollView.contentInset = UIEdgeInsetsMake(-50, 0, 0, 0);
+//    self.mainScrollView.contentOffset = CGPointMake(0, -50);
+    self.subScrollView.contentOffset = CGPointMake(0, -50);
 }
 
 - (void)testTableView {

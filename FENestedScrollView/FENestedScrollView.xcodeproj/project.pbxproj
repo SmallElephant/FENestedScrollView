@@ -15,6 +15,7 @@
 		A83403971FFCB16500A49C20 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A83403961FFCB16500A49C20 /* main.m */; };
 		A83403A11FFCB16500A49C20 /* FENestedScrollViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A83403A01FFCB16500A49C20 /* FENestedScrollViewTests.m */; };
 		A83403AC1FFCB16500A49C20 /* FENestedScrollViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A83403AB1FFCB16500A49C20 /* FENestedScrollViewUITests.m */; };
+		A86648311FFF5822005AB418 /* UIScrollView+UITouch.m in Sources */ = {isa = PBXBuildFile; fileRef = A86648301FFF5822005AB418 /* UIScrollView+UITouch.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		A83403A71FFCB16500A49C20 /* FENestedScrollViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FENestedScrollViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A83403AB1FFCB16500A49C20 /* FENestedScrollViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FENestedScrollViewUITests.m; sourceTree = "<group>"; };
 		A83403AD1FFCB16500A49C20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A866482F1FFF5822005AB418 /* UIScrollView+UITouch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+UITouch.h"; sourceTree = "<group>"; };
+		A86648301FFF5822005AB418 /* UIScrollView+UITouch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+UITouch.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				A83403921FFCB16500A49C20 /* LaunchScreen.storyboard */,
 				A83403951FFCB16500A49C20 /* Info.plist */,
 				A83403961FFCB16500A49C20 /* main.m */,
+				A866482F1FFF5822005AB418 /* UIScrollView+UITouch.h */,
+				A86648301FFF5822005AB418 /* UIScrollView+UITouch.m */,
 			);
 			path = FENestedScrollView;
 			sourceTree = "<group>";
@@ -266,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A834038C1FFCB16500A49C20 /* ViewController.m in Sources */,
+				A86648311FFF5822005AB418 /* UIScrollView+UITouch.m in Sources */,
 				A83403971FFCB16500A49C20 /* main.m in Sources */,
 				A83403891FFCB16500A49C20 /* AppDelegate.m in Sources */,
 			);
